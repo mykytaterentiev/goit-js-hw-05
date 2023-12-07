@@ -1,12 +1,78 @@
-function getElementWidth(content, padding, border) {
-const contentWidth = parseFloat(content);
-  const paddingWidth = parseFloat(padding);
-  const borderWidth = parseFloat(border);
-  const totalWidth = contentWidth + 2 * (paddingWidth + borderWidth);
+const sortByDescendingFriendCount = (users) => users.toSorted((firstFriend, secondFriend) => secondFriend.friends.length - firstFriend.friends.length);
 
-  return totalWidth;
-};
-
-console.log(getElementWidth("50px", "8px", "4px")); 
-console.log(getElementWidth("60px", "12px", "8.5px")); 
-console.log(getElementWidth("200px", "0px", "0px")); 
+console.log(
+  sortByDescendingFriendCount([
+    {
+      name: "Moore Hensley",
+      friends: ["Sharron Pace"],
+      gender: "male"
+    },
+    {
+      name: "Sharlene Bush",
+      friends: ["Briana Decker", "Sharron Pace"],
+      gender: "female"
+    },
+    {
+      name: "Ross Vazquez",
+      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+      gender: "male"
+    },
+    {
+      name: "Elma Head",
+      friends: ["Goldie Gentry", "Aisha Tran"],
+      gender: "female"
+    },
+    {
+      name: "Carey Barr",
+      friends: ["Jordan Sampson", "Eddie Strong"],
+      gender: "male"
+    },
+    {
+      name: "Blackburn Dotson",
+      friends: ["Jacklyn Lucas", "Linda Chapman"],
+      gender: "male"
+    },
+    {
+      name: "Sheree Anthony",
+      friends: ["Goldie Gentry", "Briana Decker"],
+      gender: "female"
+    }
+  ])
+);
+// [
+//   {
+//     name: "Ross Vazquez",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Elma Head",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Moore Hensley",
+//     friends: ["Sharron Pace"],
+//     gender: "male"
+//   }
+// ]
